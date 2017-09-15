@@ -9,26 +9,31 @@ public class Set{
 
 
     public void add (int numberToAdd) {
+        boolean isNumberInArray = false;
         for (int i = 0; i < setNumbers.size(); i++) {
-            if (numberToAdd == ) {
-                return;
-            } else {
-                setNumbers.add(numberToAdd);
+            if (numberToAdd == setNumbers.get(i)) {
+                isNumberInArray = true;
             }
-
         }
-
+        if (!isNumberInArray) {
+            setNumbers.add(numberToAdd);
+        }
     }
 
     public void remove(int numberToRemove) {
+        for (int i = 0; i < setNumbers.size(); i++) {
+            if (numberToRemove == setNumbers.get(i)) {
+                setNumbers.remove(i);
+            }
 
+        }
     }
 
     public Integer getLengthOfNumbers() {
         return setNumbers.size();
     }
 
-    public ArrayList<Integer> getSetNumbers() {
+    public ArrayList<Integer> values() {
         return setNumbers;
     }
 }

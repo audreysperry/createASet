@@ -6,8 +6,11 @@ public class Main {
 
         Set mySet = new Set();
         mySet.add(12);
+        mySet.add(12);
+        mySet.add(14);
+        mySet.remove(14);
 
-        System.out.println(mySet.getSetNumbers());
+        System.out.println(mySet.values());
         System.out.println(mySet.getLengthOfNumbers());
     }
 }
